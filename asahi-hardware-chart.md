@@ -2,6 +2,10 @@
 
 Last Updated: November 2025
 
+**Recent Changes:**
+- November 2025: Fedora Asahi KDE confirmed working on M2 after community feedback
+- See [investigation article]() for details on why initial testing showed different results
+
 ## M2 MacBook Pro Compatibility
 
 | Distribution | Desktop Environment | GPU Rendering | TouchBar | Audio | WiFi | Bluetooth | Installation Difficulty | Overall Stability | Notes |
@@ -95,7 +99,7 @@ I am happy with my current install and don't want to wipe it. If you are willing
 - Based on older Debian kernel without upstream Asahi hardware support
 
 ### Void Linux
-**Tested:** [Month/Year]
+**Tested:** November 2025
 
 **Installation Steps:**
 1. Follow official Void Linux Apple Silicon documentation
