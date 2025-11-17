@@ -6,8 +6,8 @@ Last Updated: November 2025
 
 | Distribution | Desktop Environment | GPU Rendering | TouchBar | Audio | WiFi | Bluetooth | Installation Difficulty | Overall Stability | Notes |
 |--------------|---------------------|---------------|----------|-------|------|-----------|------------------------|-------------------|-------|
-| **Arch Asahi ALARM** | KDE Plasma | ✅ Out of box | ✅ Out of box | ✅ | ✅ | ✅ | ⭐⭐ Easy | ⭐⭐⭐⭐⭐ Excellent | **RECOMMENDED**: Hardware rendering and TouchBar work immediately after installing `asahi-base` package. Best overall experience. |
-| **Fedora Asahi Remix** | GNOME | ❌ Never worked | ⚠️ Requires `tiny-dfr` | ✅ | ✅ | ✅ | ⭐⭐⭐ Moderate | ⭐⭐⭐ Good | Software rendering only. Manual Mesa compilation did not resolve GPU issues. TouchBar requires manual package install. |
+| **Arch Asahi ALARM** | KDE Plasma | ✅ Out of box | ✅ Out of box | ✅ | ✅ | ✅ | ⭐⭐ Easy | ⭐⭐⭐⭐⭐ Excellent | Hardware rendering and TouchBar work immediately after installing `asahi-base` package. |
+| **Fedora Asahi Remix** | KDE Plasma | ✅ Out of box | ✅ Out of box | ✅ | ✅ | ✅ | ⭐⭐ Easy | ⭐⭐⭐⭐⭐ Excellent | **RECOMMENDED**: Flagship Distro. Hardware rendering and TouchBar work immediately. |
 | **Ubuntu Asahi** | GNOME | ⚠️ Requires custom kernel | ❓ Not tested | ✅ | ✅ | ✅ | ⭐⭐⭐⭐⭐ Very Hard | ⭐⭐ Poor | GPU rendering only works after custom compiling latest kernel with Rust + apple_drm support. **All Snap apps have severe graphical bugs** (only lower-left quarter renders). |
 | **Void Linux** | N/A | ❌ Never booted | ❌ Never booted | ❌ Never booted | ❌ Never booted | ❌ Never booted | ⭐⭐⭐⭐⭐ Very Hard | ❌ Failed | Installation completes but system won't boot past blinking cursor. Contradictory documentation for chroot install. |
 
@@ -43,28 +43,38 @@ Last Updated: November 2025
 **Installation Steps:**
 1. Run Arch Asahi ALARM install script
 2. Choose KDE Install
-4. Run system upgrade: `pacman -Syu`
-6. Reboot - GPU acceleration and TouchBar work immediately
+3. Run system upgrade: `pacman -Syu`
+4. Reboot - GPU acceleration and TouchBar work immediately
 
 **Known Issues:**
 - Aggressive kernel hardening (AppArmor + sysctl + boot params simultaneously) can brick the system
 - Suggest testing hardening changes incrementally
 
-### Fedora Asahi Remix + GNOME
-**Tested:** [Month/Year]  
-**Kernel Version:** 6.18
-**Mesa Version:** Asahi Downstream Mesa
+### Fedora Asahi Remix + KDE
+**Tested:** November 2025  
+**Kernel Version:** 6.16.8-400.asahi.fc42.aarch64+16k
+**Mesa Version:** 25.2.4 (Installed Automatically)
 
 **Installation Steps:**
 1. Run official Asahi install script from asahilinux.org
-2. Choose Fedora Asahi Remix
-3. After boot, install TouchBar support: `dnf install tiny-dfr`
-4. Reboot to enable TouchBar
+2. Choose Fedora Asahi Remix + KDE
 
 **Known Issues:**
-- GPU hardware acceleration does not work even after manual Mesa compilation
-- Software rendering causes poor performance and battery drain
-- Asahi-specific Mesa fork compilation process is time-consuming and unsuccessful
+- None so far
+
+### Fedora Asahi Remix + GNOME 
+
+**Status**: Needs Update (as of November 2025)
+
+I am happy with my current install and don't want to wipe it. If you are willing to test, please create a pull request after you update this section.
+
+**Needs to be retested**
+
+**Installation Steps:**
+**Used the official Asahi Installer and select the option with GNOME**
+
+**Known Issues:**
+**Unknown:** **Needs to be retested**
 
 ### Ubuntu Asahi + GNOME
 **Tested:** October 2025  
